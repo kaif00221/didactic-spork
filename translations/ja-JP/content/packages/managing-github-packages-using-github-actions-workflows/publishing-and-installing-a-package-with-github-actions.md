@@ -15,6 +15,8 @@ shortTitle: Actionsでの公開とインストール
 
 {% data reusables.package_registry.packages-ghes-release-stage %}
 {% data reusables.package_registry.packages-ghae-release-stage %}
+{% data reusables.actions.ae-beta %}
+{% data reusables.actions.ae-self-hosted-runners-notice %}
 
 ## {% data variables.product.prodname_actions %}との{% data variables.product.prodname_registry %}について
 

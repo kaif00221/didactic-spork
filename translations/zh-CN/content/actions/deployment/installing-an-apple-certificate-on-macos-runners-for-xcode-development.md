@@ -17,6 +17,7 @@ shortTitle: 签名 Xcode 应用程序
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## 简介
 

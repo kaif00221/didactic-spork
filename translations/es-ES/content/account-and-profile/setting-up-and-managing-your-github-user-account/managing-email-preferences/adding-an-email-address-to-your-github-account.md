@@ -18,9 +18,7 @@ shortTitle: Agregar una dirección de correo electrónico
 
 {% note %}
 
-**Notas**:
-  - {% data reusables.user_settings.no-verification-disposable-emails %}
-  -  Si eres miembro de una {% data variables.product.prodname_emu_enterprise %}, no puedes hacer cambios a tu dirección de correo electrónico en {% data variables.product.prodname_dotcom_the_website %}. {% data reusables.enterprise-accounts.emu-more-info-account %}
+**Nota**: {% data reusables.user_settings.no-verification-disposable-emails %}
 
 {% endnote %}
 

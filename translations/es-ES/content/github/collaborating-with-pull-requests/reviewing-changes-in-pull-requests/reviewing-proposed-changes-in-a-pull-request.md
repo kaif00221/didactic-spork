@@ -43,11 +43,11 @@ Antes de enviar tu revisión, tus comentarios de líneas quedan _pendientes_, y 
 
 {% codespaces %}
 
-Puedes utilizar los [{% data variables.product.prodname_codespaces %}](/codespaces/overview) para probar, ejecutar y revisar las solicitudes de cambios.
+You can use [{% data variables.product.prodname_codespaces %}](/codespaces/overview) to test, run, and review pull requests.
 
 {% data reusables.codespaces.review-pr %}
 
-Para obtener más información sobre revisar las solicitudes de cambios en los {% data variables.product.prodname_codespaces %}, consulta la sección "[Utilizar los Codespaces para las solicitudes de cambios](/codespaces/developing-in-codespaces/using-codespaces-for-pull-requests)".
+For more information on reviewing pull requests in {% data variables.product.prodname_codespaces %}, see "[Using Codespaces for pull requests](/codespaces/developing-in-codespaces/using-codespaces-for-pull-requests)."
 
 {% endcodespaces %}
 {% endif %}

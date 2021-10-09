@@ -17,6 +17,7 @@ type: reference
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## 关于 {% data variables.product.prodname_actions %} 的 YAML 语法
 
@@ -105,7 +106,7 @@ outputs:
 
 **必要** 输出参数的 `string` 描述。
 
-## 用于复合操作的 `outputs`
+## `outputs` for composite actions
 
 **可选** `outputs` 使用与 `outputs.<output_id>` 及 `outputs.<output_id>.description` 相同的参数（请参阅“用于 {% data variables.product.prodname_actions %}</a> 的
 
@@ -140,7 +141,7 @@ runs:
 
 **必要** 输出参数将会映射到的值。 您可以使用上下文将此设置为 `string` 或表达式。 例如，您可以使用 `steps` 上下文将输出的 `value` 设置为步骤的输出值。
 
-有关如何使用上下文语法的更多信息，请参阅“[上下文](/actions/learn-github-actions/contexts)”。
+For more information on how to use context syntax, see "[Contexts](/actions/learn-github-actions/contexts)."
 
 
 
@@ -246,7 +247,7 @@ runs:
 
 
 
-## 用于复合操作的 `runs`
+## `runs` for composite actions
 
 **必要** 配置组合操作的路径和用于执行代码的应用程序。
 
@@ -254,7 +255,7 @@ runs:
 
 ### `runs.using`
 
-**必要** 要使用复合操作，请将此设置为 `"composite"`。
+**Required** To use a composite action, set this to `"composite"`.
 
 
 
@@ -263,11 +264,11 @@ runs:
 {% ifversion fpt or ghes > 3.2 or ghae-issue-4853 %}
 
 
-**必要** 您计划在此操作中的步骤。 这些步骤可以是 `run` 步骤或 `uses` 步骤。 
+**Required** The steps that you plan to run in this action. These can be either `run` steps or `uses` steps. 
 
 {% else %}
 
-**必要** 您计划在此操作中的步骤。 
+**Required** The steps that you plan to run in this action. 
 
 {% endif %}
 
@@ -278,7 +279,7 @@ runs:
 {% ifversion fpt or ghes > 3.2 or ghae-issue-4853 %}
 
 
-**可选** 您想要运行的命令。 这可以是内联的，也可以是操作仓库中的脚本： 
+**Optional** The command you want to run. 这可以是内联的，也可以是操作仓库中的脚本： 
 
 {% else %}
 
@@ -322,11 +323,11 @@ runs:
 {% ifversion fpt or ghes > 3.2 or ghae-issue-4853 %}
 
 
-**可选** 您想要在其中运行命令的 shell。 您可以使用[这里](/actions/reference/workflow-syntax-for-github-actions#using-a-specific-shell)列出的任何 shell。 如果设置了 `run`，则必填。 
+**Optional** The shell where you want to run the command. 您可以使用[这里](/actions/reference/workflow-syntax-for-github-actions#using-a-specific-shell)列出的任何 shell。 Required if `run` is set. 
 
 {% else %}
 
-**必要** 您想要在其中运行命令的 shell。 您可以使用[这里](/actions/reference/workflow-syntax-for-github-actions#using-a-specific-shell)列出的任何 shell。 如果设置了 `run`，则必填。 
+**必要** 您想要在其中运行命令的 shell。 您可以使用[这里](/actions/reference/workflow-syntax-for-github-actions#using-a-specific-shell)列出的任何 shell。 Required if `run` is set. 
 
 {% endif %}
 
@@ -334,7 +335,7 @@ runs:
 
 #### `runs.steps[*].name`
 
-**可选** 复合步骤的名称。
+**Optional** The name of the composite step.
 
 
 
@@ -346,7 +347,7 @@ runs:
 
 #### `runs.steps[*].env`
 
-**可选** 设置环境变量的 `map` 仅用于该步骤。 如果要修改工作流程中存储的环境变量，请在复合步骤中使用 {% ifversion fpt or ghes > 2.22 or ghae %}`echo "{name}={value}" >> $GITHUB_ENV`{% else %}`echo "::set-env name={name}::{value}"`{% endif %}。
+**可选** 设置环境变量的 `map` 仅用于该步骤。 If you want to modify the environment variable stored in the workflow, use {% ifversion fpt or ghes > 2.22 or ghae %}`echo "{name}={value}" >> $GITHUB_ENV`{% else %}`echo "::set-env name={name}::{value}"`{% endif %} in a composite step.
 
 
 
@@ -359,7 +360,7 @@ runs:
 
 #### `runs.steps[*].uses`
 
-**可选**  选择作为作业步骤一部分运行的操作。 操作是一种可重复使用的代码单位。 您可以使用工作流程所在仓库中、公共仓库中或[发布 Docker 容器映像](https://hub.docker.com/)中定义的操作。
+**Optional**  Selects an action to run as part of a step in your job. 操作是一种可重复使用的代码单位。 您可以使用工作流程所在仓库中、公共仓库中或[发布 Docker 容器映像](https://hub.docker.com/)中定义的操作。
 
 强烈建议指定 Git ref、SHA 或 Docker 标记编号来包含所用操作的版本。 如果不指定版本，在操作所有者发布更新时可能会中断您的工作流程或造成非预期的行为。
 
@@ -398,7 +399,7 @@ runs:
 
 #### `runs.steps[*].with`
 
-**可选** 输入参数的 `map` 由操作定义。 每个输入参数都是一个键/值对。  输入参数被设置为环境变量。 该变量的前缀为 INPUT_，并转换为大写。
+**Optional**  A `map` of the input parameters defined by the action. 每个输入参数都是一个键/值对。  输入参数被设置为环境变量。 The variable is prefixed with INPUT_ and converted to upper case.
 
 
 

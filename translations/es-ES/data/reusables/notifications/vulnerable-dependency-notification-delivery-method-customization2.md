@@ -1,1 +1,1 @@
-Puedes elegir el método de entrega de las notificaciones, así como la frecuencia en las que se te envían.
+You can choose the delivery method for notifications, as well as the frequency at which the notifications are sent to you.

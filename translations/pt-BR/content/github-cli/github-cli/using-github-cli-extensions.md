@@ -1,6 +1,6 @@
 ---
-title: Usando as extensões de CLI do GitHub
-intro: 'Aprenda a usar extensões personalizadas escritas por outros usuários de {% data variables.product.prodname_cli %}.'
+title: Using GitHub CLI extensions
+intro: 'Learn how to use custom extensions written by other {% data variables.product.prodname_cli %} users.'
 versions:
   fpt: '*'
   ghes: '*'
@@ -9,61 +9,61 @@ topics:
   - CLI
 ---
 
-## Sobre extensões de {% data variables.product.prodname_cli %}
+## About {% data variables.product.prodname_cli %} extensions
 
 {% note %}
 
-**Observação:** As extensões fora de {% data variables.product.product_name %} e {% data variables.product.prodname_cli %} não são certificadas por {% data variables.product.product_name %} e são regidas por termos de serviço separados, política de privacidade e documentação de suporte. Para mitigar o risco ao usar extensões de terceiros, faça a auditoria do código-fonte da extensão antes de instalá-la ou atualizá-la.
+**Note:** Extensions outside of {% data variables.product.product_name %} and {% data variables.product.prodname_cli %} are not certified by {% data variables.product.product_name %} and are governed by separate terms of service, privacy policy, and support documentation. To mitigate risk when using third-party extensions, audit the source code of the extension before installing or updating the extension.
 
 {% endnote %}
 
-{% data reusables.cli.cli-extensions %} Para obter mais informações sobre como criar extensões de {% data variables.product.prodname_cli %}, consulte "[Criando extensões de {% data variables.product.prodname_cli %}](/github-cli/github-cli/creating-github-cli-extensions)".
+{% data reusables.cli.cli-extensions %} For more information about how to create {% data variables.product.prodname_cli %} extensions, see "[Creating {% data variables.product.prodname_cli %} extensions](/github-cli/github-cli/creating-github-cli-extensions)."
 
-As extensões são instaladas localmente e têm seu escopo definido para o usuário. Portanto, se você acessar {% data variables.product.prodname_cli %} de uma máquina diferente ou outro usuário acessar {% data variables.product.prodname_cli %} da mesma máquina, a extensão não estará disponível.
+Extensions are locally installed and are scoped to the user. Therefore, if you access {% data variables.product.prodname_cli %} from a different machine or another user accesses {% data variables.product.prodname_cli %} from the same machine, the extension will not be available.
 
-## Localizando extensões
+## Finding extensions
 
-Você pode encontrar extensões acessando [repositórios com o tópico](https://github.com/topics/gh-extension) de `gh-extension`.
+You can find extensions by browsing [repositories with the `gh-extension` topic](https://github.com/topics/gh-extension).
 
-## Instalando as extensões
+## Installing extensions
 
-Para instalar uma extensão, use o subcomando `extensions install`. Substitua o parâmetro `repo` pelo repositório da extensão. Você pode usar a URL completa, como `https://github.com/octocat/gh-whoami` ou apenas o proprietário e o repositório, como `octocat/gh-whoami`.
+To install an extension, use the `extensions install` subcommand. Replace the `repo` parameter with the repository of the extension. You can use the full URL, such as `https://github.com/octocat/gh-whoami`, or just the owner and repository, such as `octocat/gh-whoami`.
 
-Se o proprietário e repositório forem usados, `gh` irá instalar a extensão usando o nome de host com o qual `gh` está atualmente autenticado. O formato completo da URL é útil ao instalar extensões de um host diferente. Por exemplo, os usuários em {% data variables.product.prodname_ghe_server %} devem usar a URL completa do repositório para instalar extensões de {% data variables.product.prodname_dotcom_the_website %} ou de qualquer outro host.
+If the owner and repository are used, `gh` will install the extension using the hostname to which `gh` is currently authenticated. The full URL format is useful when installing extensions from a different host. For example, users on {% data variables.product.prodname_ghe_server %} should use the full repository URL to install extensions from {% data variables.product.prodname_dotcom_the_website %} or any other host.
 
-Para instalar uma extensão em desenvolvimento a partir do diretório atual, use `.` como o valor para o parâmetro `repo`.
+To install an extension in development from the current directory, use `.` as the value for the `repo` parameter.
 
 ```shell
 gh extension install <em>repo</em>
 ```
 
-Se você já tem uma extensão com o mesmo nome instalado, o comando irá falhar. Por exemplo, se você instalou `octocat/gh-whoami`, você deverá desinstalá-lo antes de instalar `hubot/gh-whoami`.
+If you already have an extension by the same name installed, the command will fail. For example, if you have installed `octocat/gh-whoami`, you must uninstall it before installing `hubot/gh-whoami`.
 
-## Visualizando extensões instaladas
+## Viewing installed extensions
 
-Para ver todas as extensões instaladas, use o subcomando `lista de extensões`. A saída também informará quais extensões possuem atualizações disponíveis.
+To view all installed extensions, use the `extensions list` subcommand. The output will also tell you which extensions have updates available.
 
 ```shell
 gh extension list
 ```
 
-## Atualizando extensões
+## Updating extensions
 
-Para atualizar uma extensão, use o subcomando `extensions upgrade`. Substitua o parâmetro `extensão` pelo nome da extensão.
+To update an extension, use the `extensions upgrade` subcommand. Replace the `extension` parameter with the name of the extension.
 
 ```shell
 gh extension upgrade <em>extension</em>
 ```
 
-Para atualizar todas as extensões instaladas, use o sinalizador `--all`.
+To update all installed extensions, use the `--all` flag.
 
 ```shell
 gh extension upgrade --all
 ```
 
-## Desinstalando extensões
+## Uninstalling extensions
 
-Para desinstalar uma extensão, use o subcomando `extensions remove`. Substitua o parâmetro `extensão` pelo nome da extensão.
+To uninstall an extension, use the `extensions remove` subcommand. Replace the `extension` parameter with the name of the extension.
 
 ```shell
 gh extension remove <em>extension</em>

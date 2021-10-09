@@ -16,6 +16,7 @@ versions:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Sobre os segredos encriptados
 
@@ -61,7 +62,7 @@ Ao gerar credenciais, recomendamos que você conceda as permissões mínimas pos
 
 {% note %}
 
-**Observação:** Você pode usar a API REST para gerenciar segredos. Para obter mais informações, consulte "[{% data variables.product.prodname_actions %} secrets API](/rest/reference/actions#secrets)."
+**Note:** You can use the REST API to manage secrets. Para obter mais informações, consulte "[{% data variables.product.prodname_actions %} secrets API](/rest/reference/actions#secrets)."
 
 {% endnote %}
 
@@ -89,19 +90,19 @@ Se o seu repositório {% ifversion fpt or ghes > 3.0 or ghae %}tiver segredos de
 
 {% data reusables.cli.cli-learn-more %}
 
-Para adicionar um segredo de repositório, use o subcomando `gh secret set`. Substitua `nome secreto` pelo nome do seu segredo.
+To add a repository secret, use the `gh secret set` subcommand. Replace `secret-name` with the name of your secret.
 
 ```shell
 gh secret set <em>secret-name</em>
 ```
 
-A CLI solicitará que você digite o valor de um segredo. Como alternativa, você pode ler o valor do segredo a partir de um arquivo.
+The CLI will prompt you to enter a secret value. Alternatively, you can read the value of the secret from a file.
 
 ```shell
 gh secret set <em>secret-name</em> < secret.txt
 ```
 
-Para listar todos os segredos para o repositório, use o subcomando da lista `gh secret`.
+To list all secrets for the repository, use the `gh secret list` subcommand.
 
 {% endcli %}
 
@@ -128,13 +129,13 @@ Para listar todos os segredos para o repositório, use o subcomando da lista `gh
 
 {% cli %}
 
-Para adicionar um segredo a um ambiente, use o subcomando `secret set` com o sinalizador `--env` ou `-e`, seguido do nome do ambiente.
+To add a secret for an environment, use the `gh secret set` subcommand with the `--env` or `-e` flag followed by the environment name.
 
 ```shell
 gh secret set --env <em>environment-name</em> <em>secret-name</em>
 ```
 
-Para listar todos os segredos para um ambiente use o subcomando `gh secret list` com o sinalizador `--env` ou `-e` seguido do nome do ambiente.
+To list all secrets for an environment, use the `gh secret list` subcommand with the `--env` or `-e` flag followed by the environment name.
 
 ```shell
 gh secret list --env <em>environment-name</em>
@@ -169,7 +170,7 @@ Ao criar um segredo em uma organização, você pode usar uma política para lim
 
 {% note %}
 
-**Observação:** Por padrão, {% data variables.product.prodname_cli %} efetua a autenticação com os escopos `repo` e `read:org`. Para gerenciar segredos da organização, você deve adicionalmente autorizar o escopo `admin:org`.
+**Note:** By default, {% data variables.product.prodname_cli %} authenticates with the `repo` and `read:org` scopes. To manage organization secrets, you must additionally authorize the `admin:org` scope.
 
 ```
 gh auth login --scopes "admin:org"
@@ -177,25 +178,25 @@ gh auth login --scopes "admin:org"
 
 {% endnote %}
 
-Para adicionar um segredo de uma organização, use o subcomando `gh secret set` com o sinalizador `--org` ou `-o`, seguido do nome da organização.
+To add a secret for an organization, use the `gh secret set` subcommand with the `--org` or `-o` flag followed by the organization name.
 
 ```shell
 gh secret set --org <em>organization-name</em> <em>secret-name</em>
 ```
 
-Por padrão, o segredo só está disponível para repositórios privados. Para especificar que o segredo deve estar disponível para todos os repositórios da organização, use o sinalizador `--visibility` ou `-v`.
+By default, the secret is only available to private repositories. To specify that the secret should be available to all repositories within the organization, use the `--visibility` or `-v` flag.
 
 ```shell
 gh secret set --org <em>organization-name</em> <em>secret-name</em> --visibility all
 ```
 
-Para especificar que o segredo deve estar disponível nos repositórios selecionados dentro da organização, use o sinalizador `--repos` ou `-r`.
+To specify that the secret should be available to selected repositories within the organization, use the `--repos` or `-r` flag.
 
 ```shell
 gh secret set --org <em>organization-name</em> <em>secret-name</em> --repos <em>repo-name-1</em>,<em>repo-name-2</em>"
 ```
 
-Para listar todos os segredos de uma organização, use o subcomando `gh secret list` com o sinalizador `--org` ou `-o` seguido do nome da organização.
+To list all secrets for an organization, use the `gh secret list` subcommand with the `--org` or `-o` flag followed by the organization name.
 
 ```shell
 gh secret list --org <em>organization-name</em>
@@ -221,7 +222,7 @@ Você pode verificar quais políticas de acesso são aplicadas a um segredo na s
 
 {% endnote %}
 
-Para fornecer uma ação com um segredo como uma entrada ou variável de ambiente, você pode usar o contexto de `segredos` para acessar os segredos que você criou no seu repositório. Para obter mais informações, consulte "[Contextos](/actions/learn-github-actions/contexts)" e "[Sintaxe de fluxo de trabalho para {% data variables.product.prodname_actions %}](/github/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions)".
+Para fornecer uma ação com um segredo como uma entrada ou variável de ambiente, você pode usar o contexto de `segredos` para acessar os segredos que você criou no seu repositório. For more information, see "[Contexts](/actions/learn-github-actions/contexts)" and "[Workflow syntax for {% data variables.product.prodname_actions %}](/github/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions)."
 
 {% raw %}
 ```yaml

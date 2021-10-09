@@ -37,7 +37,7 @@ Alternatively, you can enable {% data variables.product.prodname_actions %} for 
 
 {% endif %}
 
-{% ifversion fpt or ghes > 2.22 or ghae %}
+{% ifversion fpt or ghes > 2.22 or ghae-next %}
 
 ## Managing {% data variables.product.prodname_actions %} permissions for your organization
 

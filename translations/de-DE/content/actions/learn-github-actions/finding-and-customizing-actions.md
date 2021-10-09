@@ -18,6 +18,7 @@ topics:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Übersicht
 
@@ -167,7 +168,7 @@ jobs:
         verwendet: docker://alpine:3.8
 ```
 
-Einige Beispiele für Docker-Aktionen finden Sie im [Docker-image.yml-Workflow](https://github.com/actions/starter-workflows/blob/main/ci/docker-image.yml) oder unter „[Eine Docker-Container-Aktion erstellen](/articles/creating-a-docker-container-action)“.
+Einige Beispiele für Docker-Aktionen findest Du im [Docker-image.yml-Workflow](https://github.com/actions/starter-workflows/blob/main/ci/docker-image.yml) oder unter „[Eine Docker-Container-Aktion erstellen](/articles/creating-a-docker-container-action)“.
 
 ## Nächste Schritte:
 

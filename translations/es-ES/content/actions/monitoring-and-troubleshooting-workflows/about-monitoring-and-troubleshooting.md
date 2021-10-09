@@ -1,19 +1,20 @@
 ---
-title: Acerca del monitoreo y solución de problemas
-intro: 'Puedes utilizar las herramientas en las {% data variables.product.prodname_actions %} para monitorear y depurar tus flujos de trabajo.'
+title: About monitoring and troubleshooting
+intro: 'You can use the tools in {% data variables.product.prodname_actions %} to monitor and debug your workflows.'
 product: '{% data reusables.gated-features.actions %}'
 versions:
   fpt: '*'
   ghes: '*'
   ghae: '*'
-shortTitle: Acerca de monitorear y solucionar problemas
+shortTitle: About monitoring and troubleshooting
 miniTocMaxHeadingLevel: 3
 ---
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
-## Monitorear tus flujos de trabajo
+## Monitoring your workflows
 
 {% ifversion fpt or ghae or ghes > 3.0 %}
 
@@ -23,7 +24,7 @@ Cada ejecución de flujo de trabajo genera una gráfica en tiempo real que ilust
 
    ![Gráfica del flujo de trabajo](/assets/images/help/images/workflow-graph.png)
 
-Para obtener más información, consulta la sección "[Utilizar el gráfico de visualización](/actions/monitoring-and-troubleshooting-workflows/using-the-visualization-graph)".
+For more information, see "[Using the visualization graph](/actions/monitoring-and-troubleshooting-workflows/using-the-visualization-graph)."
 
 {% endif %}
 
@@ -36,7 +37,7 @@ Para obtener más información, consulta la sección "[Agregar una insignia de e
 {% ifversion fpt %}
 ### Visualizar el tiempo de ejecución de un job
 
-Para identificar qué tanto tomará un job en ejecutarse, puedes ver su tiempo de ejecución. Por ejemplo:
+To identify how long a job took to run, you can view its execution time. Por ejemplo:
 
    ![Enlace para los detalles de tiempo facturable y de ejecución](/assets/images/help/repository/view-run-billable-time.png)
 
@@ -45,17 +46,17 @@ Para obtener más información, consulta la sección "[Visualizar el tiempo de e
 
 ### Visualizar el historial de ejecución del flujo de trabajo
 
-Puedes ver el estado de cada job y paso en un flujo de trabajo. Por ejemplo:
+You can view the status of each job and step in a workflow. Por ejemplo:
 
    ![Nombre de la ejecución de flujo de trabajo](/assets/images/help/repository/run-name.png)
 
 Para obtener más información, consulta la sección "[Visualizar el historial de ejecuciones de un flujo de trabajo](/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history)".
 
-## Solucionar los problemas de tus flujos de trabajo
+## Troubleshooting your workflows
 
 ### Utilizar bitácoras de ejecución de flujo de trabajo
 
-Cada ejecución de flujo de trabajo genera bitácoras de actividad que puedes ver, buscar y descargar. Por ejemplo:
+Each workflow run generates activity logs that you can view, search, and download. Por ejemplo:
 
    ![Resultados del flujo de trabajo de Super linter](/assets/images/help/repository/super-linter-workflow-results-updated-2.png)
 
@@ -67,6 +68,6 @@ Si los registros de flujo de trabajo no proporcionan suficiente detalle para dia
 
 ## Monitorear y solucionar problemas para los ejecutores auto-hospedados
 
-Si utilizas ejecutores auto-hospedados, puedes ver su actividad y diagnosticar problemas comunes.
+If you use self-hosted runners, you can view their activity and diagnose common issues.
 
 Para obtener más información, consulta la sección "[Monitorear y solucionar problemas de los ejecutores auto-hospedados](/actions/hosting-your-own-runners/monitoring-and-troubleshooting-self-hosted-runners)".

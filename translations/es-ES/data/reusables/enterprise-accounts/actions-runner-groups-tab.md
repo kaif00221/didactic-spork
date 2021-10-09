@@ -1,1 +1,1 @@
-1. Haz clic en la pestaña **Grupos de ejecutores**.
+1. Click the **Runner groups** tab.

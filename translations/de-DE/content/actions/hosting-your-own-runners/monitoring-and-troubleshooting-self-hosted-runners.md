@@ -17,6 +17,7 @@ shortTitle: Monitor & troubleshoot
 {% data reusables.actions.ae-self-hosted-runners-notice %}
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Den Status eines selbst-gehosteten Runners mittels {% data variables.product.prodname_dotcom %} überprüfen
 
@@ -24,7 +25,7 @@ shortTitle: Monitor & troubleshoot
 
 {% data reusables.github-actions.self-hosted-runner-navigate-repo-and-org %}
 {% data reusables.github-actions.settings-sidebar-actions-runners %}
-1. Under {% ifversion fpt or ghes > 3.1 or ghae-next %}"Runners"{% else %}"Self-hosted runners"{% endif %}, you can view a list of registered runners, including the runner's name, labels, and status.
+1. Under {% ifversion fpt %}"Runners"{% else %}"Self-hosted runners"{% endif %}, you can view a list of registered runners, including the runner's name, labels, and status.
 
     Der Status kann einer der folgenden sein:
 

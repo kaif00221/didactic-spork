@@ -165,19 +165,19 @@ Esta categoria controla a forma como o índice [Problemas][] é reparado. Você 
 - iniciar um novo trabalho de reparo de índice;
 - redefinir o estado de todo o reparo de índice.
 {% endif %}
-## Logins reservados
+## Reserved logins
 
-Certas palavras são reservadas para uso interno em {% data variables.product.product_location %}, o que significa que essas palavras não podem ser usadas como nomes de usuário.
+Certain words are reserved for internal use in {% data variables.product.product_location %}, which means that these words cannot be used as usernames.
 
-Por exemplo, as palavras a seguir são reservadas, entre outras:
+For example, the following words are reserved, among others:
 
 - `administrador`
 - `enterprise`
 - `login`
-- `equipe`
+- `staff`
 - `suporte`
 
-Para a lista completa ou palavras reservadas, acesse "Logins reservados" no painel de administração do site.
+For the full list or reserved words, navigate to "Reserved logins" in the site admin dashboard.
 
 {% ifversion ghes or ghae %}
 
@@ -197,7 +197,7 @@ Este espaço lista os repositórios da {% data variables.product.product_locatio
 
 ## Todos os usuários
 
-Aqui você pode ver todos os usuários em {% data variables.product.product_location %}, e [iniciar uma auditoria de chave SSH](/enterprise/{{ currentVersion }}/admin/guides/user-management/auditing-ssh-keys).
+Here you can see all of the users on {% data variables.product.product_location %}, and [initiate an SSH key audit](/enterprise/{{ currentVersion }}/admin/guides/user-management/auditing-ssh-keys).
 
 ## Administradores do site
 
@@ -208,7 +208,7 @@ Aqui você verá todos os administradores da {% data variables.product.product_l
 Aqui você pode ver e [suspender](/enterprise/{{ currentVersion }}/admin/guides/user-management/suspending-and-unsuspending-users) todos os usuários inativos da {% data variables.product.product_location %}. Uma conta de usuário é considerada inativa quando:
 {% endif %}
 {% ifversion ghae %}
-Aqui você pode ver e suspender todos os usuários inativos em {% data variables.product.product_location %}. Uma conta de usuário é considerada inativa quando:
+Here you can see and suspend all of the inactive users on {% data variables.product.product_location %}. Uma conta de usuário é considerada inativa quando:
 {% endif %}
 
 - Seu tempo de existência supera o limite de inatividade configurado na {% data variables.product.product_location %};

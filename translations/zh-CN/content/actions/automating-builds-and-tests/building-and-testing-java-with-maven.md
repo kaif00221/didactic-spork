@@ -19,6 +19,7 @@ shortTitle: 使用 Maven 构建和测试 Java
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## 简介
 

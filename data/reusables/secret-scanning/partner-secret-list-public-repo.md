@@ -35,7 +35,6 @@ Dynatrace | Dynatrace Internal Token
 Finicity | Finicity App Key
 Frame.io | Frame.io JSON Web Token
 Frame.io| Frame.io Developer Token
-FullStory| FullStory API Key
 GitHub | GitHub Personal Access Token
 GitHub | GitHub OAuth Access Token
 GitHub | GitHub Refresh Token

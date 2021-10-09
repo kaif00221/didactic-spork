@@ -16,7 +16,6 @@ versions:
 shortTitle: Executores hospedados no GitHub
 ---
 
-{% data reusables.actions.ae-hosted-runners-beta %}
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
 

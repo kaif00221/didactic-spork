@@ -1,22 +1,22 @@
 ---
-title: Ejecutar código de alumnos en un IDE
-intro: Puedes ejecutar el código desde una tarea de un alumno dentro del ambiente de desarrollo integrado (IDE) que configuraste para la tarea.
+title: Run student code in an IDE
+intro: You can run the code from a student assignment within the integrated development environment (IDE) that you configured for the assignment.
 versions:
   fpt: '*'
 redirect_from:
   - /education/manage-coursework-with-github-classroom/running-student-code
   - /education/manage-coursework-with-github-classroom/run-student-code-in-an-online-ide
   - /education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide/run-student-code-in-an-online-ide
-shortTitle: Ejecutar código en un IDE
+shortTitle: Run code in IDE
 ---
 
-## Acerca de el código de los alumnos y los IDE
+## About student code and IDEs
 
-Si configuras un ambiente de desarrollo integrado (IDE) para una tarea, puedes ejecutar el código dentro de éste. No necesitas clonar el repositorio de la tarea en tu computadora.
+If you configure an integrated development environment (IDE) for an assignment, you can run the code within the IDE. No necesitas clonar el repositorio de la tarea en tu computadora.
 
-Para obtener más información sobre los IDE, consulta la sección "[Integrar a {% data variables.product.prodname_classroom %} con un IDE](/education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide/integrate-github-classroom-with-an-ide)".
+For more information about IDEs, see "[Integrate {% data variables.product.prodname_classroom %} with an IDE](/education/manage-coursework-with-github-classroom/integrate-github-classroom-with-an-ide/integrate-github-classroom-with-an-ide)."
 
-## Ejecutar el código de los alumnos en el IDE
+## Running student code in the IDE
 
 {% data reusables.classroom.sign-into-github-classroom %}
 {% data reusables.classroom.click-classroom-in-list %}

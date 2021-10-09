@@ -17,6 +17,5 @@ children:
 shortTitle: Utilizar los ejecutores hospedados en GitHub
 ---
 
-{% data reusables.actions.ae-hosted-runners-beta %}
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}

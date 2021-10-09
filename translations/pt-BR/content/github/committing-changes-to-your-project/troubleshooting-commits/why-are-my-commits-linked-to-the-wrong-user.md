@@ -52,4 +52,4 @@ Caso a configuração local do Git contenha um endereço de e-mail genérico ou 
 
 ## Leia mais
 
-* "[Pesquisar commits](/search-github/searching-on-github/searching-commits)"
+* "[Pesquisar commits](/articles/searching-commits)"

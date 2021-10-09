@@ -1,6 +1,6 @@
 ---
-title: Criar uma ação composta
-intro: 'Neste guia, você aprenderá a criar uma ação composta.'
+title: Creating a composite action
+intro: 'In this guide, you''ll learn how to build a composite action.'
 product: '{% data reusables.gated-features.actions %}'
 redirect_from:
   - /actions/creating-actions/creating-a-composite-run-steps-action
@@ -11,17 +11,18 @@ versions:
 type: tutorial
 topics:
   - Action development
-shortTitle: Ação composta
+shortTitle: Composite action
 ---
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Introdução
 
-Neste guia, você aprenderá os componentes básicos necessários para criar e usar uma ação composta empacotada. Para manter o foco deste guia nos componentes necessários para empacotar a ação, a funcionalidade do código da ação é mínima. A ação imprime "Hello World" e "Goodbye", ou, se você fornecer um nome personalizado, imprimirá "Hello [who-to-greet]" e "Goodbye". A ação também mapeia um número aleatório para a variável de saída `random-number` e executa um script denominado `goodbye.sh`.
+In this guide, you'll learn about the basic components needed to create and use a packaged composite action. Para manter o foco deste guia nos componentes necessários para empacotar a ação, a funcionalidade do código da ação é mínima. A ação imprime "Hello World" e "Goodbye", ou, se você fornecer um nome personalizado, imprimirá "Hello [who-to-greet]" e "Goodbye". A ação também mapeia um número aleatório para a variável de saída `random-number` e executa um script denominado `goodbye.sh`.
 
-Ao concluir este projeto, você entenderá como criar a sua própria ação composta e testá-la em um fluxo de trabalho.
+Once you complete this project, you should understand how to build your own composite action and test it in a workflow.
 
 {% data reusables.github-actions.context-injection-warning %}
 
@@ -29,7 +30,7 @@ Ao concluir este projeto, você entenderá como criar a sua própria ação comp
 
 Antes de começar, você criará um repositório {% data variables.product.product_name %}.
 
-1. Crie um repositório público novo no {% data variables.product.product_location %}. Você pode escolher qualquer nome de repositório ou usar o exemplo `hello-world-composite-action`. É possível adicionar esses arquivos após push do projeto no {% data variables.product.product_name %}. Para obter mais informações, consulte "[Criar um repositório novo](/articles/creating-a-new-repository)".
+1. Crie um repositório público novo no {% data variables.product.product_location %}. You can choose any repository name, or use the following `hello-world-composite-action` example. É possível adicionar esses arquivos após push do projeto no {% data variables.product.product_name %}. Para obter mais informações, consulte "[Criar um repositório novo](/articles/creating-a-new-repository)".
 
 1. Clone o repositório para seu computador. Para obter mais informações, consulte "[Clonar um repositório](/articles/cloning-a-repository)".
 
@@ -39,7 +40,7 @@ Antes de começar, você criará um repositório {% data variables.product.produ
   cd hello-world-composite-action
   ```
 
-2. No repositório `hello-world-composite-action`, crie um novo arquivo denominado `goodbye.sh` e adicione o seguinte código de exemplo:
+2. In the `hello-world-composite-action` repository, create a new file called `goodbye.sh`, and add the following example code:
 
   ```bash
   echo "Goodbye"
@@ -60,7 +61,7 @@ Antes de começar, você criará um repositório {% data variables.product.produ
 
 ## Criar um arquivo de metadados de ação
 
-1. No repositório `hello-world-composite-action`, crie um novo arquivo denominado `action.yml` e adicione o código de exemplo a seguir. Para obter mais informações sobre essa sintaxe, consulte "[`executa` para uma ação composta](/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-composite-actions)".
+1. In the `hello-world-composite-action` repository, create a new file called `action.yml` and add the following example code. For more information about this syntax, see "[`runs` for a composite actions](/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-composite-actions)".
 
     {% raw %}
     **action.yml**
@@ -88,9 +89,9 @@ Antes de começar, você criará um repositório {% data variables.product.produ
           shell: bash
     ```
     {% endraw %}
-  Este arquivo define a entrada de `who-to-greet`, mapeia o número aleatório gerado para a variável de saída `random-number` e executa o script `goodbye.sh`. Também informa ao executor como executar a ação composta.
+  Este arquivo define a entrada de `who-to-greet`, mapeia o número aleatório gerado para a variável de saída `random-number` e executa o script `goodbye.sh`. It also tells the runner how to execute the composite action.
 
-  Para obter mais informações sobre o gerenciamento de saídas, consulte "[`outputs` para uma ação composta](/actions/creating-actions/metadata-syntax-for-github-actions#outputs-for-composite-actions).
+  For more information about managing outputs, see "[`outputs` for a composite action](/actions/creating-actions/metadata-syntax-for-github-actions#outputs-for-composite-actions)".
 
   Para obter mais informações sobre como usar `github.action_path`, consulte "[`github context`](/actions/reference/context-and-expression-syntax-for-github-actions#github-context)".
 
@@ -113,7 +114,7 @@ Antes de começar, você criará um repositório {% data variables.product.produ
 
 O código de fluxo de trabalho a seguir usa a ação hello world completa que você fez em "[Criando uma ação arquivo de metadados](/actions/creating-actions/creating-a-composite-action#creating-an-action-metadata-file)".
 
-Copie o código do fluxo de trabalho em um arquivo `.github/workflows/main.yml` em outro repositório, mas substitua `actions/hello-world-composite-action@v1` pelo repositório e pela tag que você criou. Você também pode substituir a entrada `who-to-greet` pelo seu nome.
+Copy the workflow code into a `.github/workflows/main.yml` file in another repository, but replace `actions/hello-world-composite-action@v1` with the repository and tag you created. Você também pode substituir a entrada `who-to-greet` pelo seu nome.
 
 {% raw %}
 **.github/workflows/main.yml**

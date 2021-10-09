@@ -18,6 +18,7 @@ versions:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## 关于工作流程命令
 
@@ -88,7 +89,7 @@ core.setOutput('SELECTED_COLOR', 'green');
 | `core.setOutput`                                                                                   | `set-output`                                                  |
 | `core.setSecret`                                                                                   | `add-mask`                                                    |
 | `core.startGroup`                                                                                  | `组`                                                           |
-| `core.warning`                                                                                     | `警告`                                                          |
+| `core.warning`                                                                                     | `warning file`                                                |
 
 {% ifversion ghes < 3.0 %}
 ## 设置环境变量
@@ -97,7 +98,7 @@ core.setOutput('SELECTED_COLOR', 'green');
 ::set-env name={name}::{value}
 ```
 
-为作业中接下来运行的任何步骤创建或更新环境变量。 The step that creates or updates the environment variable does not have access to the new value, but all subsequent steps in a job will have access. 环境变量区分大小写，并且可以包含标点符号。
+Creates or updates an environment variable for any steps running next in a job. The step that creates or updates the environment variable does not have access to the new value, but all subsequent steps in a job will have access. 环境变量区分大小写，并且可以包含标点符号。
 
 ### 示例
 
@@ -328,13 +329,7 @@ steps:
 echo "{name}={value}" >> $GITHUB_ENV
 ```
 
-为作业中接下来运行的任何步骤创建或更新环境变量。 The step that creates or updates the environment variable does not have access to the new value, but all subsequent steps in a job will have access. 环境变量区分大小写，并且可以包含标点符号。
-
-{% note %}
-
-**Note:** Environment variables must be explicitly referenced using the [`env` context](/actions/reference/context-and-expression-syntax-for-github-actions#env-context) in expression syntax or through use of the `$GITHUB_ENV` file directly; environment variables are not implicitly available in shell commands.
-
-{% endnote %}
+Creates or updates an environment variable for any steps running next in a job. The step that creates or updates the environment variable does not have access to the new value, but all subsequent steps in a job will have access. 环境变量区分大小写，并且可以包含标点符号。
 
 ### 示例
 
@@ -381,7 +376,7 @@ steps:
 echo "{path}" >> $GITHUB_PATH
 ```
 
-Prepends a directory to the system `PATH` variable and automatically makes it available to all subsequent actions in the current job; the currently running action cannot access the updated path variable. 要查看作业的当前定义路径，您可以在步骤或操作中使用 `echo "$PATH"`。
+为系统 `PATH` 变量预先设置一个目录，使其可用于当前作业中的所有后续操作；当前运行的操作无法访问更新的路径变量。 要查看作业的当前定义路径，您可以在步骤或操作中使用 `echo "$PATH"`。
 
 ### 示例
 
