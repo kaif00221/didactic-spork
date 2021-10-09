@@ -1,6 +1,6 @@
 ---
-title: Acerca de los archivos de CITATION
-intro: Puedes agregar un archivo de CITATION a tu repositorio para ayudar a que los usuarios citen tu software correctamente.
+title: About CITATION files
+intro: You can add a CITATION file to your repository to help users correctly cite your software.
 redirect_from:
   - /github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files
 versions:
@@ -11,11 +11,11 @@ topics:
   - Repositories
 ---
 
-## Acerca de los archivos de CITATION
+## About CITATION files
 
-Puedes agregar un archivo de `CITATION.cff` a la raíz de un repositorio para que otros sepan cómo te gustaría que citaran tu trabajo. El formato de archivo de cita es texto simple con información de cita legible para humanos y máquinas.
+You can add a `CITATION.cff` file to the root of a repository to let others know how you would like them to cite your work. The citation file format is plain text with human- and machine-readable citation information.
 
-Ejemplo de archivo de `CITATION.cff`:
+Example `CITATION.cff` file:
 
 ```
 cff-version: 1.2.0
@@ -34,7 +34,7 @@ date-released: 2017-12-18
 url: "https://github.com/github/linguist"
 ```
 
-El mensaje de cita de GitHub en tu repositorio te mostrará el contenido de ejemplo de un `CITATION.cff` en estos formatos:
+The GitHub citation prompt on your repository will show the example `CITATION.cff` content in these formats:
 
 **APA**
 
@@ -46,37 +46,30 @@ Lisa, M., & Bot, H. (2017). My Research Software (Version 2.0.4) [Computer softw
 
 {% raw %}
 ```
-@software{Lisa_My_Research_Software_2017,
+@misc{Lisa_My_Research_Software_2017,
   author = {Lisa, Mona and Bot, Hew},
   doi = {10.5281/zenodo.1234},
   month = {12},
   title = {{My Research Software}},
   url = {https://github.com/github/linguist},
-  version = {2.0.4},
   year = {2017}
 }
 ```
 {% endraw %}
 
-Note the example above produces a _software_ citation (i.e., `@software` type in BibTeX rather than `@article`).
+Note the example above produces a _software_ citation (i.e., `@misc` type in BibTeX rather than `@article`).
 
-Para obtener más información, consulta el sitio web de [Formatos de Archivos de Citas](https://citation-file-format.github.io/).
+For more information, see the [Citation File Format](https://citation-file-format.github.io/) website.
 
-Cuando agregas un archivo de `CITATION.cff` a la rama predeterminada de tu repositorio, este se enlaza automáticamente desde la página de llegada del repositorio. Esto hace fácil que otros usuarios citen tu proyecto de software, utilizando la información que proporcionaste.
+When you add a `CITATION.cff` file to the default branch of your repository, it is automatically linked from the repository landing page. This makes it easy for other users to cite your software project, using the information you've provided.
 
-![Enlaze de cita en la página de inicio de un repositorio](/assets/images/help/repository/citation-link.png)
+![Citation link on repository landing page](/assets/images/help/repository/citation-link.png)
 
-## Citar algo que no sea software
+## Citing something other than software
 
-If you would prefer the {% data variables.product.prodname_dotcom %} citation information to link to another resource such as a research article, then you can use the `preferred-citation` override in CFF with the following types.
+If you would prefer the GitHub citation information to link to another resource such as a research paper then you can use the `preferred-citation` override in CFF.
 
-| Resource         | Type               |
-| ---------------- | ------------------ |
-| Research article | `article`          |
-| Conference paper | `conference-paper` |
-| Book             | `book`             |
-
-Extended CITATION.cff file describing the software, but linking to a research article as the preferred citation:
+Extended CITATION.cff file describing the software, but linking to a research paper as the preferred citation:
 
 ```
 cff-version: 1.2.0
@@ -113,7 +106,7 @@ preferred-citation:
   year: 2021
 ```
 
-El archivo `CITATION.cff` anterior producirá los siguientes resultados en el mensaje de cita de GitHub:
+The example `CITATION.cff` file above will produce the following outputs in the GitHub citation prompt:
 
 **APA**
 
@@ -139,15 +132,11 @@ Lisa, M., & Bot, H. (2021). My awesome research software. Journal Title, 1(1), 1
 ```
 {% endraw %}
 
-## Citing a dataset
+## Other citation files
 
-If your repository contains a dataset, you can set `type: dataset` in your `CITATION.cff` file to produce a data citation string output in the {% data variables.product.prodname_dotcom %} citation prompt.
+The GitHub citation feature will also detect a small number of additional files that are often used by communities and projects to describe how they would like their work to be cited.
 
-## Otros archivos de cita
-
-La característica de cita de GitHub también detectará una cantidad pequeña de archivos adicionales que a menudo se utilizan en las comunidades y proyectos para describir cómo quieren que se cite su trabajo.
-
-GitHub enlazará estos archivos en el mensaje de _Citar este repositorio_, pero no intentará analizarlos en otros formatos de cita.
+GitHub will link to these files in the _Cite this repository_ prompt, but will not attempt to parse them into other citation formats.
 
 ```
 # Note these are case-insensitive and must be in the root of the repository
@@ -162,8 +151,8 @@ CITATIONS.md
 inst/CITATION
 ```
 
-## Formatos de cita
+## Citation formats
 
-Actualmente tenemos compatibilidad con formatos de archivo en APA y BibTex.
+We currently support APA and BibTex file formats.
 
-¡Estás buscando formatos de cita adicionales? GitHub utiliza una librería de Ruby para analizar los archivos de `CITATION.cff`. Puedes solicitar formatos adicionales en el repositorio [ruby-cff](https://github.com/citation-file-format/ruby-cff) o proporcionarlos tú mismo como contribución.
+Are you looking for additional citation formats? GitHub uses a Ruby library, to parse the `CITATION.cff` files. You can request additional formats in the [ruby-cff](https://github.com/citation-file-format/ruby-cff) repository, or contribute them yourself.

@@ -62,5 +62,5 @@ Los propietarios de la empresa y gerentes de facturación pueden administrar el 
 {% data reusables.dotcom_billing.update-spending-limit %}
 
 
-## Administrar las notificaciones de uso y límite de gastos
+## Managing usage and spending limit email notifications
 {% data reusables.billing.email-notifications %}

@@ -17,6 +17,5 @@ children:
 shortTitle: 使用 GitHub 托管的运行器
 ---
 
-{% data reusables.actions.ae-hosted-runners-beta %}
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}

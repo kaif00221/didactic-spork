@@ -1,6 +1,6 @@
 ---
-title: Habilitando codespaces para a sua organização
-shortTitle: Habilitando codespaces
+title: Enabling Codespaces for your organization
+shortTitle: Enabling Codespaces
 intro: 'Você pode controlar quais usuários da sua organização podem usar {% data variables.product.prodname_codespaces %}.'
 product: '{% data reusables.gated-features.codespaces %}'
 permissions: 'To manage user permissions for {% data variables.product.prodname_codespaces %} for an organization, you must be an organization owner.'
@@ -16,19 +16,19 @@ topics:
 ---
 
 
-## Sobre habilitar {% data variables.product.prodname_codespaces %} para a sua organização
+## About enabling {% data variables.product.prodname_codespaces %} for your organization
 
 Os proprietários da organização podem controlar quais usuários da sua organização podem criar e usar cdespaces.
 
-Para usar codespaces na sua organização, você deve fazer o seguinte:
+To use codespaces in your organization, you must do the following:
 
-- Certifique-se de que os usuários tenham [pelo menos acesso de gravação](/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization) nos repositórios onde desejam usar um codespace.
-- [Habilitar {% data variables.product.prodname_codespaces %} para os usuários da sua organização](#configuring-which-users-in-your-organization-can-use-codespaces). Você pode escolher permitir {% data variables.product.prodname_codespaces %} para usuários selecionados ou apenas para usuários específicos.
-- [Definir um limite de gastos](/billing/managing-billing-for-github-codespaces/managing-spending-limits-for-codespaces)
+- Ensure that users have [at least write access](/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization) to the repositories where they want to use a codespace.
+- [Enable {% data variables.product.prodname_codespaces %} for users in your organization](#configuring-which-users-in-your-organization-can-use-codespaces). You can choose allow {% data variables.product.prodname_codespaces %} for selected users or only for specific users.
+- [Set a spending limit](/billing/managing-billing-for-github-codespaces/managing-spending-limits-for-codespaces)
 
-Por padrão, um codespace só pode acessar o repositório no qual ele foi criado. Se você quiser que os codespaces na sua organização possam acessar outros repositórios da organização que o criador do codespace possa acessar, consulte "[Gerenciar acesso e segurança para {% data variables.product.prodname_codespaces %}](/codespaces/managing-codespaces-for-your-organization/managing-access-and-security-for-your-organizations-codespaces)".
+By default, a codespace can only access the repository from which it was created. Se você quiser que os codespaces na sua organização possam acessar outros repositórios da organização que o criador do codespace possa acessar, consulte "[Gerenciar acesso e segurança para {% data variables.product.prodname_codespaces %}](/codespaces/managing-codespaces-for-your-organization/managing-access-and-security-for-your-organizations-codespaces)".
 
-## Habilitar {% data variables.product.prodname_codespaces %} para os usuários na sua organização
+## Enable {% data variables.product.prodname_codespaces %} for users in your organization
 
 {% data reusables.profile.access_org %}
 {% data reusables.profile.org_settings %}
@@ -40,14 +40,14 @@ Por padrão, um codespace só pode acessar o repositório no qual ele foi criado
 
    ![Botões de opção para "Permissões do usuário"](/assets/images/help/codespaces/organization-user-permission-settings.png)
 
-## Desabilitando {% data variables.product.prodname_codespaces %} para sua organização
+## Disabling {% data variables.product.prodname_codespaces %} for your organization
 
 {% data reusables.profile.access_org %}
 {% data reusables.profile.org_settings %}
 {% data reusables.organizations.click-codespaces %}
-1. Em "Permissões de usuário", selecione **Desabilitado**.
+1. Under "User permissions", select **Disabled**.
 
-## Definindo um limite de gastos
+## Setting a spending limit
 
 {% data reusables.codespaces.codespaces-spending-limit-requirement %}
 

@@ -18,7 +18,13 @@ API 预览允许您试用新的 API 以及对现有 API 方法的更改（在它
 
 要访问 API 预览，需要在 `Accept` 标头中为您的请求提供自定义[媒体类型](/rest/overview/media-types)。 每个预览的功能文档可指定要提供的自定义媒体类型。
 
-{% ifversion ghes < 3.3 %}
+{% ifversion fpt %}
+## 迁移
+
+允许您从自己的 GitHub 用户或组织帐户下载仓库，以审查、备份以及[迁移](/rest/reference/migrations)数据到 {% data variables.product.prodname_ghe_server %}。
+
+**自定义媒体类型：** `wyandotte-preview` **公布日期：** [2018-05-24](https://developer.github.com/changes/2018-05-24-user-migration-api/)
+{% endif %}
 
 ## 增强型部署
 
@@ -26,27 +32,17 @@ API 预览允许您试用新的 API 以及对现有 API 方法的更改（在它
 
 **自定义媒体类型：** `ant-man-preview` **公布日期：** [2016-04-06](https://developer.github.com/changes/2016-04-06-deployment-and-deployment-status-enhancements/)
 
-{% endif %}
-
-{% ifversion ghes < 3.3 %}
-
 ## 反应
 
 管理对提交、议题和注释的[反应](/rest/reference/reactions)。
 
 **自定义媒体类型：** `squirrel-girl-preview` **公布日期：** [2016-05-12](https://developer.github.com/changes/2016-05-12-reactions-api-preview/) **更新日期：** [2016-06-07](https://developer.github.com/changes/2016-06-07-reactions-api-update/)
 
-{% endif %}
-
-{% ifversion ghes < 3.3 %}
-
 ## 时间表
 
 获取针对议题或拉取请求的[事件列表](/rest/reference/issues#timeline)。
 
 **自定义媒体类型：** `mockingbird-preview` **公布日期：** [2016-05-23](https://developer.github.com/changes/2016-05-23-timeline-preview-api/)
-
-{% endif %}
 
 {% ifversion ghes %}
 ## 预接收环境
@@ -56,13 +52,11 @@ API 预览允许您试用新的 API 以及对现有 API 方法的更改（在它
 **自定义媒体类型：** `eye-scream-preview` **公布日期：** [2015-07-29](/rest/reference/enterprise-admin#pre-receive-environments)
 {% endif %}
 
-{% ifversion ghes < 3.3 %}
 ## 项目
 
 管理[项目](/rest/reference/projects)。
 
 **自定义媒体类型：** `inertia-preview` **公布日期：** [2016-09-14](https://developer.github.com/changes/2016-09-14-projects-api/) **更新日期：** [2016-10-27](https://developer.github.com/changes/2016-10-27-changes-to-projects-api/)
-{% endif %}
 
 ## 提交搜索
 
@@ -76,15 +70,11 @@ API 预览允许您试用新的 API 以及对现有 API 方法的更改（在它
 
 **自定义媒体类型：** `mercy-preview` **公布日期：** [2017-01-31](https://github.com/blog/2309-introducing-topics)
 
-{% ifversion ghes < 3.3 %}
-
 ## 行为准则
 
 查看[所有行为准则](/rest/reference/codes-of-conduct)或获取仓库的当前行为准则。
 
 **自定义媒体类型：** `scarlet-witch-preview`
-
-{% endif %}
 
 {% ifversion ghae or ghes %}
 
@@ -103,15 +93,11 @@ API 预览允许您试用新的 API 以及对现有 API 方法的更改（在它
 
 **自定义媒体类型：** `zzzax-preview` **公布日期：** [2018-02-22](https://developer.github.com/changes/2018-02-22-protected-branches-required-signatures)
 
-{% ifversion ghes < 3.3 %}
-
 ## 要求多次审批
 
 现在，您可以使用 API [要求多次审批](/rest/reference/repos#branches)拉取请求。
 
 **自定义媒体类型：** `luke-cage-preview` **公布日期：** [2018-03-16](https://developer.github.com/changes/2018-03-16-protected-branches-required-approving-reviews)
-
-{% endif %}
 
 {% ifversion ghes < 3.0 %}
 ## 检查运行和检查套件 API
@@ -149,17 +135,11 @@ GitHub 应用程序清单允许用户创建预配置的 GitHub 应用程序。 �
 
 {% endif %}
 
-{% ifversion ghes < 3.3 %}
-
 ## 部署状态
 
 现在，您可以更新[部署状态](/rest/reference/repos#create-a-deployment-status)的 `environment` 并使用 `in_progress` 和 `queued` 状态。 创建部署状态时，现在可以使用 `auto_inactive` 参数将旧的 `production` 部署标记为 `inactive`。
 
 **自定义媒体类型：** `flash-preview` **公布日期：** [2018-10-16](https://developer.github.com/changes/2018-10-16-deployments-environments-states-and-auto-inactive-updates/)
-
-{% endif %}
-
-{% ifversion ghes < 3.3 %}
 
 ## 仓库创建权限
 
@@ -167,23 +147,17 @@ GitHub 应用程序清单允许用户创建预配置的 GitHub 应用程序。 �
 
 **自定义媒体类型：** `surtur-preview` **公布日期：** [2019-12-03](https://developer.github.com/changes/2019-12-03-internal-visibility-changes/)
 
-{% endif %}
-
 ## 内容附件
 
 现在，您可以在 GitHub 中使用 {% data variables.product.prodname_unfurls %} API 提供有关链接到注册域的 URL 的更多信息。 更多信息请参阅“[使用内容附件](/apps/using-content-attachments/)”。
 
 **自定义媒体类型：** `corsair-preview` **公布日期：** [2018-12-10](https://developer.github.com/changes/2018-12-10-content-attachments-api/)
 
-{% ifversion ghes < 3.3 %}
-
 ## 启用和禁用页面
 
 您可以使用[页面 API](/rest/reference/repos#pages) 中的新端点来启用或禁用页面。 要了解有关页面的更多信息，请参阅“[GitHub Pages 基础知识](/categories/github-pages-basics)”。
 
 **自定义媒体类型：** `switcheroo-preview` **公布日期：** [2019-03-14](https://developer.github.com/changes/2019-03-14-enabling-disabling-pages/)
-
-{% endif %}
 
 {% ifversion ghes < 3.3 %}
 
@@ -195,7 +169,11 @@ GitHub 应用程序清单允许用户创建预配置的 GitHub 应用程序。 �
 
 {% endif %}
 
-{% ifversion ghes < 3.3 %}
+## 为仓库启用或禁用漏洞警报
+
+您可以使用[仓库 API](/rest/reference/repos) 中的两个新端点来启用或禁用漏洞警报。
+
+**自定义媒体类型：** `dorian-preview` **公布日期：** [2019-04-24](https://developer.github.com/changes/2019-04-24-vulnerability-alerts/)
 
 ## 更新拉取请求分支
 
@@ -203,6 +181,12 @@ GitHub 应用程序清单允许用户创建预配置的 GitHub 应用程序。 �
 
 **自定义媒体类型：** `lydian-preview` **公布日期：** [2019-05-29](https://developer.github.com/changes/2019-05-29-update-branch-api/)
 
+{% ifversion fpt %}
+## 启用或禁用自动安全修复
+
+您可以使用一组新的端点来[启用和禁用自动安全修复](/rest/reference/repos#enable-automated-security-fixes)。
+
+**自定义媒体类型：** `london-preview` **公布日期：** [2019-06-04](https://developer.github.com/changes/2019-06-04-automated-security-fixes/)
 {% endif %}
 
 ## 创建和使用仓库模板
@@ -211,8 +195,7 @@ GitHub 应用程序清单允许用户创建预配置的 GitHub 应用程序。 �
 
 **自定义媒体类型：** `baptiste-preview` **公布日期：** [2019-07-05](https://developer.github.com/changes/2019-07-16-repository-templates-api/)
 
-{% ifversion ghes < 3.3 %}
-
+{% ifversion fpt or ghes or ghae %}
 ## 仓库 API 的新可见性参数
 
 您可以在[仓库 API](/rest/reference/repos) 中设置和检索仓库可见性。

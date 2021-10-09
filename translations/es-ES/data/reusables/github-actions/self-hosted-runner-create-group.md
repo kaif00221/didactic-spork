@@ -1,1 +1,1 @@
-1. Haz clic en **Crear grupo** para crear el grupo y aplicar la política.
+1. Click **Create group** to create the group and apply the policy.

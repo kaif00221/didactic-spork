@@ -19,6 +19,7 @@ shortTitle: Migrarse desde Circle Cl
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Introducción
 

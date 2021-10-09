@@ -18,6 +18,7 @@ shortTitle: Migrarse desde GitLab IC/DC
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Introducción
 
@@ -132,7 +133,7 @@ Para obtener más información, consulta la sección "[Sintaxis de flujo de trab
 
 ## Imágenes de Docker
 
-Tanto la IC/EC de GitLab como las {% data variables.product.prodname_actions %} son compatibles con la ejecución de jobs en una imagen de Docker. En la IC/EC de GitLab, las imágenes de Docker se definen con una clave de `image`, mientras que en las {% data variables.product.prodname_actions %} se hace con la clave `container`.
+Tanto la IC/EC de GitLab como las {% data variables.product.prodname_actions %} son compatibles con la ejecución de jobs en una imagen de Docker. In GitLab CI/CD, Docker images are defined with an `image` key, while in {% data variables.product.prodname_actions %} it is done with the `container` key.
 
 Puedes encontrar un ejemplo de la sintaxis para cada sistema:
 
@@ -211,7 +212,7 @@ jobs:
 </tr>
 </table>
 
-Para obtener más información, consulta la sección "[Expresiones](/actions/learn-github-actions/expressions)".
+For more information, see "[Expressions](/actions/learn-github-actions/expressions)."
 
 ## Dependencias entre los Jobs
 

@@ -11,6 +11,7 @@ shortTitle: 手动运行工作流程
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## 配置工作流程手动运行
 

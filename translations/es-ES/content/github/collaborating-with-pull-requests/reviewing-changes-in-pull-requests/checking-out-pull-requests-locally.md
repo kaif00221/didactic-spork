@@ -39,7 +39,7 @@ shortTitle: Verificar una solicitud de cambios localmente
 
 {% data reusables.cli.cli-learn-more %}
 
-Para verificar una solicitud de cambios localmente, utiliza el subcomando `gh pr checkout`. Reemplaza la `pull-request` con el número, URL o rama de encabezado de la solicitud de cambios.
+To check out a pull request locally, use the `gh pr checkout` subcommand. Replace `pull-request` with the number, URL, or head branch of the pull request.
 
 ```shell
 gh pr checkout <em>pull-request</em>

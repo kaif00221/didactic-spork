@@ -48,7 +48,6 @@ describe('browser search', () => {
     await page.setViewport(initialViewport)
   })
   // 404 page is statically generated with next, so search is not available, but may possibly be brought back
-  // Docs Engineering issue: 961
   it.skip('works on 404 error page', async () => {
     await page.goto('http://localhost:4001/en/404')
     await page.click('[data-testid=search] input[type="search"]')
@@ -439,7 +438,6 @@ describe('language banner', () => {
 })
 
 // Skipping because next/links are disabled by default for now
-// Docs Engineering issue: 962
 describe.skip('next/link client-side navigation', () => {
   jest.setTimeout(60 * 1000)
 

@@ -1,1 +1,1 @@
-Cuando requieres el SSO de SAML, todos los miembros de la organización deben autenticarse a través de tu IdP para acceder a los recursos organizacionales.
+When you enforce SAML SSO, all members of the organization must authenticate through your IdP to access the organization's resources.

@@ -8,11 +8,12 @@ versions:
   fpt: '*'
   ghes: '*'
   ghae: '*'
-shortTitle: Crear & probar .NET
+shortTitle: Build & test .NET
 ---
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Introducción
 

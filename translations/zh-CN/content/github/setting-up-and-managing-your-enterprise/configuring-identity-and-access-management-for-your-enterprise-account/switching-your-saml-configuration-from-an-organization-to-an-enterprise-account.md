@@ -10,8 +10,6 @@ topics:
 shortTitle: Switching from organization
 ---
 
-{% data reusables.enterprise-accounts.emu-saml-note %}
-
 ## 关于企业帐户的 SAML 单点登录
 
 {% data reusables.saml.dotcom-saml-explanation %} {% data reusables.saml.about-saml-enterprise-accounts %}

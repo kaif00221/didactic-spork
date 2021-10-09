@@ -1,5 +1,5 @@
 ---
-title: Acerca del CLI de GitHub
+title: About GitHub CLI
 intro: '{% data reusables.cli.cli-intro %}'
 versions:
   fpt: '*'

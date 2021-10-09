@@ -18,6 +18,7 @@ topics:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## 概要
 
@@ -35,7 +36,7 @@ topics:
 
 ### ワークフロー
 
-ワークフローは、リポジトリに追加する自動化された手順です。 ワークフローは 1 つ以上のジョブで構成されており、スケジュールまたはイベントによってトリガーできます。 ワークフローを使用して、{% data variables.product.prodname_dotcom %} でプロジェクトをビルド、テスト、パッケージ、リリース、またはデプロイできます。 {% ifversion fpt or ghes > 3.3 or ghae-issue-4757 %}You can reference a workflow within another workflow, see "[Reusing workflows](/actions/learn-github-actions/reusing-workflows)."{% endif %}
+ワークフローは、リポジトリに追加する自動化された手順です。 ワークフローは 1 つ以上のジョブで構成されており、スケジュールまたはイベントによってトリガーできます。 ワークフローを使用して、{% data variables.product.prodname_dotcom %} でプロジェクトをビルド、テスト、パッケージ、リリース、またはデプロイできます。
 
 ### イベント
 

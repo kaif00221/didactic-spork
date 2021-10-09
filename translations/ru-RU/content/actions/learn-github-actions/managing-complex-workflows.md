@@ -13,6 +13,7 @@ topics:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Обзор
 
@@ -169,13 +170,10 @@ To learn more about self-hosted runner labels, see ["Using labels with self-host
 {% data variables.product.prodname_dotcom %}-hosted runner labels, see ["Supported runners and hardware resources"](/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources).
 {% endif %}
 
-{% data reusables.actions.reusable-workflows %}
-
-{% ifversion fpt or ghes > 3.0 or ghae-next %}
-
+{% ifversion fpt or ghes > 3.0 %}
 ## Using environments
 
-You can configure environments with protection rules and secrets. Each job in a workflow can reference a single environment. Any protection rules configured for the environment must pass before a job referencing the environment is sent to a runner. For more information, see "[Using environments for deployment](/actions/deployment/using-environments-for-deployment)."
+You can configure environments with protection rules and secrets. Each job in a workflow can reference a single environment. Any protection rules configured for the environment must pass before a job referencing the environment is sent to a runner. For more information, see "[Environments](/actions/reference/environments)."
 {% endif %}
 
 ## Using a workflow template
@@ -189,4 +187,4 @@ You can configure environments with protection rules and secrets. Each job in a 
 
 ## Дальнейшие шаги
 
-To continue learning about {% data variables.product.prodname_actions %}, see "[Sharing workflows, secrets, and runners with your organization](/actions/learn-github-actions/sharing-workflows-secrets-and-runners-with-your-organization)."
+To continue learning about {% data variables.product.prodname_actions %}, see "[Sharing workflows with your organization](/actions/learn-github-actions/sharing-workflows-with-your-organization)."

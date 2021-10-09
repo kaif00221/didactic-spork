@@ -20,7 +20,7 @@ shortTitle: Criar um PAT
 
 {% note %}
 
-**Observação:** Se você usar {% data variables.product.prodname_cli %} para efetuar a autenticação para {% data variables.product.product_name %} na linha de comando você poderá ignorar a geração de um token de acesso pessoal e efetuar a autenticação por meio da web. Para mais informações sobre a autenticação com {% data variables.product.prodname_cli %}, consulte [`login gh`](https://cli.github.com/manual/gh_auth_login).
+**Note:** If you use {% data variables.product.prodname_cli %} to authenticate to {% data variables.product.product_name %} on the command line, you can skip generating a personal access token and authenticate via the web browser instead. For more information about authenticating with {% data variables.product.prodname_cli %}, see [`gh auth login`](https://cli.github.com/manual/gh_auth_login).
 
 {% endnote %}
 
@@ -30,7 +30,7 @@ Os tokens de acesso pessoal (PATs) são uma alternativa para o uso de senhas par
 
 {% ifversion fpt %}{% data reusables.user_settings.removes-personal-access-tokens %}{% endif %}
 
-Um token com nenhum escopo atribuído só pode acessar informações públicas. Para usar seu token para acessar repositórios da linha de comando, selecione `repo`. Para obter mais informações, consulte “[Escopos disponíveis](/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
+A token with no assigned scopes can only access public information. Para usar seu token para acessar repositórios da linha de comando, selecione `repo`. For more information, see “[Available scopes](/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes)”.
 
 ## Criar um token
 
@@ -38,9 +38,9 @@ Um token com nenhum escopo atribuído só pode acessar informações públicas. 
 {% data reusables.user_settings.access_settings %}
 {% data reusables.user_settings.developer_settings %}
 {% data reusables.user_settings.personal_access_tokens %}
-{% data reusables.user_settings.generate_new_token %}
+4. Clique em **Generate new token** (Gerar novo token). ![Botão Generate new token (Gerar novo token)](/assets/images/help/settings/generate_new_token.png)
 5. Dê ao seu token um nome descritivo. ![Token description field](/assets/images/help/settings/token_description.png){% ifversion fpt or ghes > 3.2 or ghae-issue-4374 %}
-6. Para dar ao seu token uma data de vencimento, selecione o menu suspenso **Vencimento** e, em seguida, clique em um padrão ou use o seletor de calendário. ![Token expiration field](/assets/images/help/settings/token_expiration.png){% endif %}
+6. To give your token an expiration, select the **Expiration** drop-down menu, then click a default or use the calendar picker. ![Token expiration field](/assets/images/help/settings/token_expiration.png){% endif %}
 7. Selecione os escopos, ou as permissões, aos quais deseja conceder esse token. Para usar seu token para acessar repositórios da linha de comando, selecione **repo**.
    {% ifversion fpt or ghes %}
    ![Selecionar escopos do token](/assets/images/help/settings/token_scopes.gif)
@@ -75,5 +75,5 @@ Em vez de inserir manualmente seu PAT para cada operação de HTTPS do Git, voc�
 
 ## Leia mais
 
-- "[Sobre a autenticação no GitHub](/github/authenticating-to-github/about-authentication-to-github)"{% ifversion fpt or ghae-issue-4374 or ghes > 3.2 %}
-- "[Vencimento e revogação do Token](/github/authenticating-to-github/keeping-your-account-and-data-secure/token-expiration-and-revocation)"{% endif %}
+- "[About authentication to GitHub](/github/authenticating-to-github/about-authentication-to-github)"{% ifversion fpt or ghae-issue-4374 or ghes > 3.2 %}
+- "[Token expiration and revocation](/github/authenticating-to-github/keeping-your-account-and-data-secure/token-expiration-and-revocation)"{% endif %}

@@ -11,7 +11,6 @@ topics:
 shortTitle: Customize runners
 ---
 
-{% data reusables.actions.ae-hosted-runners-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
 
 If you require additional software packages on {% data variables.product.prodname_dotcom %}-hosted runners, you can create a job that installs the packages as part of your workflow.

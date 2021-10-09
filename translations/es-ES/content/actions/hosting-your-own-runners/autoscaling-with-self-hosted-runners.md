@@ -1,6 +1,6 @@
 ---
-title: Autoescalar con ejecutores auto-hospedados
-intro: Puedes escalar tus ejecutores auto-hospedados automáticamente en respuesta a eventos de webhook.
+title: Autoscaling with self-hosted runners
+intro: You can automatically scale your self-hosted runners in response to webhook events.
 versions:
   free-pro-team: '*'
   enterprise-server: '>3.2'
@@ -10,12 +10,13 @@ type: overview
 {% data reusables.actions.ae-self-hosted-runners-notice %}
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
-## Acerca del autoescalamiento
+## About autoscaling
 
 You can automatically increase or decrease the number of self-hosted runners in your environment in response to the webhook events you receive with a particular label. For example, you can create automation that adds a new self-hosted runner each time you receive a [`workflow_job`](/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_job) webhook event with the  [`queued`](/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_job) activity, which notifies you that a new job is ready for processing. The webhook payload includes label data, so you can identify the type of runner the job is requesting. Once the job has finished, you can then create automation that removes the runner in response to the `workflow_job` [`completed`](/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_job) activity.
 
-## Utilizar ejecutores efímeros para autoescalar
+## Using ephemeral runners for autoscaling
 
 {% data variables.product.prodname_dotcom %} recommends implementing autoscaling with ephemeral self-hosted runners; autoscaling with persistent self-hosted runners is not recommended. In certain cases, {% data variables.product.prodname_dotcom %} cannot guarantee that jobs are not assigned to persistent runners while they are shut down. With ephemeral runners, this can be guaranteed because {% data variables.product.prodname_dotcom %} only assigns one job to a runner.
 
@@ -35,22 +36,22 @@ The {% data variables.product.prodname_actions %} service will then automaticall
 
 {% endnote %}
 
-## Utilizar webhooks para autoescalar
+## Using webhooks for autoscaling
 
 You can create your own autoscaling environment by using payloads received from the [`workflow_job`](/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_job) webhook. This webhook is available at the repository, organization, and enterprise levels, and the payload for this event contains an `action` key that corresponds to the stages of a workflow job's life-cycle; for example when jobs are `queued`, `in_progress`, and `completed`. You must then create your own scaling automation in response to these webhook payloads.
 
-- Para obtener más información sobre el webhook de `workflow_job`, consulta la sección de "[Eventos y cargas útiles de los webhooks](/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_job)".
-- Para aprender cómo trabajar con los webhooks, consulta la sección "[Crear webhooks](/developers/webhooks-and-events/webhooks/creating-webhooks)".
+- For more information about the `workflow_job` webhook, see "[Webhook events and payloads](/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_job)."
+- To learn how to work with webhooks, see "[Creating webhooks](/developers/webhooks-and-events/webhooks/creating-webhooks)."
 
-## Requisitos de autenticación
+## Authentication requirements
 
 You can register and delete self-hosted runners using [the API](/rest/reference/actions#self-hosted-runners). To authenticate to the API, your autoscaling implementation can use an access token or a {% data variables.product.prodname_dotcom %} app.
 
 Your access token will require the following scope:
 
-- Para los repositorios privados, utiliza un token de acceso con el [alcance de `repo`](/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes).
-- Para los repositorios públicos, utiliza un token de acceso con el [alcance de `public_repo`](/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes).
+- For private repositories, use an access token with the [`repo` scope](/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes).
+- For public repositories, use an access token with the [`public_repo` scope](/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes).
 
 To  authenticate using a {% data variables.product.prodname_dotcom %} App, it must be assigned the following permissions:
-- Para los repositorios, asigna el permiso de `administration`.
-- Para las organizaciones, asigna el permiso de `organization_self_hosted_runners`.
+- For repositories, assign the `administration` permission.
+- for organizations, assign the `organization_self_hosted_runners` permission.

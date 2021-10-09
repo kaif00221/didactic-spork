@@ -19,6 +19,7 @@ shortTitle: Fazer a migração a partir dos pipelines do Azure
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Introdução
 
@@ -203,7 +204,7 @@ jobs:
 </tr>
 </table>
 
-Para obter mais informações, consulte "[Expressões](/actions/learn-github-actions/expressions)".
+For more information, see "[Expressions](/actions/learn-github-actions/expressions)."
 
 ## Dependências entre trabalhos
 

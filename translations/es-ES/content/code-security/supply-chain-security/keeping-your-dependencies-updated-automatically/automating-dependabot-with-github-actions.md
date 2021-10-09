@@ -14,7 +14,7 @@ topics:
   - Repositories
   - Dependencies
   - Pull requests
-shortTitle: Utiliza el Dependabot con las acciones
+shortTitle: Use Dependabot with actions
 ---
 
 ## Acerca del {% data variables.product.prodname_dependabot %} y de las {% data variables.product.prodname_actions %}

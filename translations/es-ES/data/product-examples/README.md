@@ -35,7 +35,7 @@ en donde la sintaxis para `versions` es la misma que la [propiedad de texto prel
 
 Los datos de ejemplo del producto se agregan al objeto `context` en `middleware/contextualizers/product-examples.js`.
 
-Entonces, `components/landing` interpretará los datos.
+The data is then rendered by `components/landing`.
 
 ## Imposición del modelado
 

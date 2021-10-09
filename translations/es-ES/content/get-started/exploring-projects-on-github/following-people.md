@@ -1,7 +1,6 @@
 ---
 title: Seguir a personas
 intro: 'Puedes seguir a personas en {% data variables.product.product_name %} para recibir notificaciones acerca de su actividad{% ifversion fpt %} y descubrir proyectos en sus comunidades{% endif %}.'
-permissions: '{% data reusables.enterprise-accounts.emu-permission-follow %}'
 redirect_from:
   - /articles/following-people
   - /github/getting-started-with-github/following-people
@@ -14,51 +13,51 @@ topics:
   - Profile
 ---
 
-## Aceca de los seguidores en {% data variables.product.product_name %}
+## About followers on {% data variables.product.product_name %}
 
-Cuando sigues a las personas, verás su actividad pública en la vista de actividad de tus noticias.{% ifversion fpt %} Si alguien que sigues marca un repositorio público como favorito, {% data variables.product.product_name %} podría recomendártelo en la vista de descubrimientos de tus noticias.{% endif %}
+When you follow people, you'll see their public activity in the activity view of your news feed.{% ifversion fpt %} If someone you follow stars a public repository, {% data variables.product.product_name %} may recommend the repository to you in the discovery view of your news feed.{% endif %}
 
-Puedes dejar de seguir a alguien si no quieres ver su actividad pública en {% data variables.product.product_name %}.
+You can unfollow someone if you do not wish to see their public activity on {% data variables.product.product_name %}.
 
-## Seguir a un usuario en {% data variables.product.product_name %}
+## Following a user on {% data variables.product.product_name %}
 
-1. Haz clic en una imagen de usuario para mostrar el perfil de este.
+1. Click a user image to display that user's profile.
 
-  ![Imagen de usuario](/assets/images/help/profile/user-profile-image.png)
+  ![User image](/assets/images/help/profile/user-profile-image.png)
 
-2. Haz clic en **Seguir** debajo de su imagen de perfil.
+2. Click **Follow** under their profile image.
 
   ![Botón Follow user (Seguir usuario)](/assets/images/help/profile/follow-user-button.png)
 
-## Dejar de seguir a un usuario en {% data variables.product.product_name %}
+## Unfollowing a user on {% data variables.product.product_name %}
 
-1.  Haz clic en una imagen de usuario para mostrar el perfil de éste.
+1.  Click a user image to display that user's profile.
 
-  ![Imagen de usuario](/assets/images/help/profile/user-profile-image.png)
+  ![User image](/assets/images/help/profile/user-profile-image.png)
 
-2.  Haz clic en **Dejar de seguir** debajo de su imagen de perfil.
+2.  Click **Unfollow** under their profile image.
 
-  ![Botón de perfil de usuario](/assets/images/help/profile/user-profile-unfollow-button.png)
+  ![User profile button](/assets/images/help/profile/user-profile-unfollow-button.png)
 
-## Visualizar a los usuarios seguidos en {% data variables.product.product_name %}
+## Viewing followed users on {% data variables.product.product_name %}
 
-1. Haz clic en una imagen de usuario para mostrar el perfil de éste.
+1. Click a user image to display that user's profile.
 
-  ![Imagen de usuario](/assets/images/help/profile/user-profile-image.png)
+  ![User image](/assets/images/help/profile/user-profile-image.png)
 
-2. Haz clic en **siguiendo** debajo de su imagen de perfil.
+2. Click **following** under their profile image.
 
-  ![Siguiendo a usuario](/assets/images/help/profile/user-profile-following.png)
+  ![User following](/assets/images/help/profile/user-profile-following.png)
 
-## Visualizar los seguidores en {% data variables.product.product_name %}
+## Viewing followers on {% data variables.product.product_name %}
 
-1. Haz clic en una imagen de usuario para mostrar el perfil de éste.
+1. Click a user image to display that user's profile.
 
-  ![Imagen de usuario](/assets/images/help/profile/user-profile-image.png)
+  ![User image](/assets/images/help/profile/user-profile-image.png)
 
-2. Haz clic en **seguidores** debajo de su imagen de perfil.
+2. Click **followers** under their profile image.
 
-  ![Usuario siguiendo](/assets/images/help/profile/user-profile-followers.png)
+  ![User following](/assets/images/help/profile/user-profile-followers.png)
 
 
 

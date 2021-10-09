@@ -1,6 +1,6 @@
 ---
-title: Utilizar los archivos
-intro: Puedes navegar y rastrear los cambios en el código de tus archivos.
+title: Using files
+intro: 'You can navigate and track changes in the code in your files.'
 versions:
   fpt: '*'
   ghes: '*'

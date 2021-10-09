@@ -17,6 +17,7 @@ shortTitle: Eventos que acionam fluxos de trabalho
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Configurar eventos de fluxo de trabalho
 
@@ -164,26 +165,6 @@ em:
     tipos: [opened, deleted]
 ```
 
-{% ifversion fpt or ghes > 3.3 or ghae-issue-4757 %}
-## Eventos de reutilização do fluxo de trabalho
-
-`workflow_call` é uma palavra-chave usada como o valor de `on` em um fluxo de trabalho, da mesma forma que um evento. Ele indica que um fluxo de trabalho pode ser chamado a prtir de outro fluxo de trabalho. Para obter mais informações, consulte "[Reutilizando fluxos de trabalho](/actions/learn-github-actions/reusing-workflows)".
-
-### `workflow_call`
-
-| Carga de evento webhook                | Tipos de atividade | `GITHUB_SHA`                           | `GITHUB_REF`                           |
-| -------------------------------------- | ------------------ | -------------------------------------- | -------------------------------------- |
-| Igual ao fluxo de trabalho de chamadas | n/a                | Igual ao fluxo de trabalho de chamadas | Igual ao fluxo de trabalho de chamadas |
-
-#### Exemplo
-
-Para tornar um fluxo de trabalho reutilizável, ele deve incluir `workflow_call` como um dos valores de `on`. O exemplo abaixo só executa o fluxo de trabalho quando é chamado a partir de outro fluxo de trabalho:
-
-```yaml
-on: workflow_call
-```
-{% endif %}
-
 ## Eventos webhook
 
 Você pode configurar seu fluxo de trabalho para executar quando eventos de webhook forem gerados em {% data variables.product.product_name %}. Alguns eventos são acionados por mais de um tipo de atividade. Se mais de um tipo de atividade acionar o evento, especifique quais tipos de atividade ativarão a execução do fluxo de trabalho. Para obter mais informações, consulte "[Webhooks](/webhooks).
@@ -317,7 +298,7 @@ Executa o fluxo de trabalho sempre que o evento `discussion` ocorrer. {% data re
 
 {% data reusables.developer-site.limit_workflow_to_activity_types %}
 
-Por exemplo, você pode executar um fluxo de trabalho quando uma discussão tiver sido `created`, `edited` ou `answered`.
+For example, you can run a workflow when a discussion has been `created`, `edited`, or `answered`.
 
 ```yaml
 on:
@@ -590,8 +571,8 @@ Executa o fluxo de trabalho sempre que o evento `pull_request` ocorre. {% data r
 {% note %}
 
 **Notas:**
-- Por padrão, um fluxo de trabalho só é executado quando um tipo de atividade de `pull_request` for `opened`, `sincronize`, ou `reopened`. Para acionar fluxos de trabalho para mais tipos de atividade, use a palavra-chave `types`.
-- Os fluxos de trabalho não serão executados na atividade `pull_request` se o pull request tiver um conflito de merge. O conflito de merge tem de ser resolvido primeiro.
+- By default, a workflow only runs when a `pull_request`'s activity type is `opened`, `synchronize`, or `reopened`. Para acionar fluxos de trabalho para mais tipos de atividade, use a palavra-chave `types`.
+- Workflows will not run on `pull_request` activity if the pull request has a merge conflict. The merge conflict must be resolved first.
 
 {% endnote %}
 

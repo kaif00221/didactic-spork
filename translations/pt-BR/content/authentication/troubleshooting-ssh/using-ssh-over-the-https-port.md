@@ -30,15 +30,15 @@ Se deu certo, ótimo! Caso contrário, [siga nosso guia para solução de proble
 
 ## Habilitar conexões SSH por HTTPS
 
-Se você conseguir fazer SSH para `git@ssh.{% data variables.command_line.backticks %}` por meio da porta 443, você poderá substituir as configurações SSH para forçar qualquer conexão ao {% data variables.product.product_location %} a ser executada nesse servidor e nessa porta.
+If you are able to SSH into `git@ssh.{% data variables.command_line.backticks %}` over port 443, you can override your SSH settings to force any connection to {% data variables.product.product_location %} to run through that server and port.
 
 Para definir isso na configuração SSH, edite o arquivo em `~/.ssh/config` e adicione esta seção:
 
 ```
 Host {% data variables.command_line.codeblock %}
 Hostname ssh.{% data variables.command_line.codeblock %}
-Porta 443
-Usuário do Git
+Port 443
+User git
 ```
 
 Para testar se funciona, conecte-se mais uma vez ao {% data variables.product.product_location %}:

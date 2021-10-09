@@ -1,1 +1,1 @@
-podrías necesitar contactar a soporte. Para obtener más información, consulta la sección "[Trabajar con soporte](/codespaces/troubleshooting/working-with-support-for-codespaces)".
+you may need to contact support. For more information, see "[Working with support](/codespaces/troubleshooting/working-with-support-for-codespaces)."

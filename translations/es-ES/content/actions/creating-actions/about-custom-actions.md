@@ -1,5 +1,5 @@
 ---
-title: Acercad e las acciones personalizadas
+title: About custom actions
 intro: 'Las acciones son tareas individuales que puedes combinar para crear trabajos y personalizar tu flujo de trabajo. Puedes crear tus propias acciones, o utilizar y personalizar a quellas que comparte la comunidad de {% data variables.product.prodname_dotcom %}.'
 product: '{% data reusables.gated-features.actions %}'
 redirect_from:
@@ -20,8 +20,9 @@ topics:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
-## Acercad e las acciones personalizadas
+## About custom actions
 
 Puedes crear acciones por medio de a escritura de un código personalizado que interactúe con tu repositorio de la manera que desees, incluida la integración con las API de {% data variables.product.prodname_dotcom %} y cualquier API de terceros disponible públicamente. Por ejemplo, una acción puede publicar módulos npm, enviar alertas por SMS cuando se crean propuestas urgentes o implementar un código listo para producción.
 

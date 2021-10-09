@@ -28,13 +28,13 @@ shortTitle: Change the default branch
 {% endnote %}
 {% endif %}
 
-{% ifversion fpt or ghes > 3.0 or ghae-next %}
+{% ifversion fpt or ghes > 3.0 %}
 
 デフォルトブランチの名前は変更することもできます。 詳しい情報については、「[ブランチの名前を変更する](/github/administering-a-repository/renaming-a-branch)」を参照してください。
 
 {% endif %}
 
-{% ifversion fpt or ghes > 2.22 or ghae-next %}
+{% ifversion fpt or ghes > 2.22 %}
 
 {% data reusables.branches.set-default-branch %}
 

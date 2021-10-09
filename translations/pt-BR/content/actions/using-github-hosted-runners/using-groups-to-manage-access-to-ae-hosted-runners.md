@@ -6,7 +6,7 @@ versions:
 shortTitle: Gerenciar grupos de executores do AE
 ---
 
-{% data reusables.actions.ae-hosted-runners-beta %}
+{% data reusables.actions.ae-beta %}
 
 ## Sobre grupos de {% data variables.actions.hosted_runner %}
 

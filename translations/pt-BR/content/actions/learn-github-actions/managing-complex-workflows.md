@@ -1,7 +1,7 @@
 ---
 title: Gerenciar fluxos de trabalhos complexos
 shortTitle: Gerenciar fluxos de trabalhos complexos
-intro: 'Este guia mostra como usar as funcionalidades avançadas de {% data variables.product.prodname_actions %}, com gestão de segredos, trabalhos dependentes, cache, matrizes de criação{% ifversion fpt or ghes > 3.0 or ghae %} ambientes,{% endif %} e etiquetas.'
+intro: 'This guide shows you how to use the advanced features of {% data variables.product.prodname_actions %}, with secret management, dependent jobs, caching, build matrices,{% ifversion fpt or ghes > 3.0 or ghae %} environments,{% endif %} and labels.'
 versions:
   fpt: '*'
   ghes: '*'
@@ -13,10 +13,11 @@ topics:
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Visão Geral
 
-Este artigo descreve alguns dos recursos avançados de {% data variables.product.prodname_actions %} que ajudam você a criar criar fluxos de trabalho mais complexos.
+This article describes some of the advanced features of {% data variables.product.prodname_actions %} that help you create more complex workflows.
 
 ## Armazenar segredos
 
@@ -142,7 +143,7 @@ Para obter mais informações, consulte "[Usar bancos de dados e contêineres de
 
 ## Usar etiquetas para encaminhar fluxos de trabalho
 
-Esse recurso ajuda você a atribuir tarefas a um executor hospedado específico. Se você quiser ter certeza de que um determinado tipo de executor irá processar seu trabalho, você pode usar etiquetas para controlar os locais onde os trabalhos são executados. Você pode atribuir etiquetas a um executor auto-hospedado, além de sua etiqueta padrão de `auto-hospedado`. Em seguida, você pode consultar essas etiquetas no seu fluxo de trabalho YAML, garantindo que o trabalho seja encaminhado de forma previsível. Os executores hospedados em {% ifversion not ghae %} {% data variables.product.prodname_dotcom %} têm etiquetas pré-definidas atribuídas.{% endif %}
+Esse recurso ajuda você a atribuir tarefas a um executor hospedado específico. Se você quiser ter certeza de que um determinado tipo de executor irá processar seu trabalho, você pode usar etiquetas para controlar os locais onde os trabalhos são executados. You can assign labels to a self-hosted runner in addition to their default label of `self-hosted`. Then, you can refer to these labels in your YAML workflow, ensuring that the job is routed in a predictable way.{% ifversion not ghae %} {% data variables.product.prodname_dotcom %}-hosted runners have predefined labels assigned.{% endif %}
 
 {% ifversion ghae %}
 Este exemplo mostra como um fluxo de trabalho pode usar etiquetas para especificar o executor obrigatório:
@@ -163,19 +164,16 @@ jobs:
     runs-on: [self-hosted, linux, x64, gpu]
 ```
 
-Um fluxo de trabalho só é executado em um executor que possui todas as etiquetas na matriz `runs-on`. O trabalho irá preferencialmente para um executor auto-hospedado inativo com as etiquetas especificadas. Se não houver nenhum disponível e houver um corredor hospedado em {% data variables.product.prodname_dotcom %} com os rótulos especificados, o trabalho irá para um executor hospedado em {% data variables.product.prodname_dotcom %}.
+A workflow will only run on a runner that has all the labels in the `runs-on` array. The job will preferentially go to an idle self-hosted runner with the specified labels. If none are available and a {% data variables.product.prodname_dotcom %}-hosted runner with the specified labels exists, the job will go to a {% data variables.product.prodname_dotcom %}-hosted runner.
 
-Para aprender mais sobre etiquetas de executores auto-hospedados, consulte ["Usando etiquetas com executores auto-hospedados](/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)". Para saber mais sobre
-Etiquetas de executores hospedados em {% data variables.product.prodname_dotcom %}, consulte ["Executores e recursos de hardware compatíveis"](/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources).
+To learn more about self-hosted runner labels, see ["Using labels with self-hosted runners](/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)." To learn more about
+{% data variables.product.prodname_dotcom %}-hosted runner labels, see ["Supported runners and hardware resources"](/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources).
 {% endif %}
 
-{% data reusables.actions.reusable-workflows %}
-
-{% ifversion fpt or ghes > 3.0 or ghae-next %}
-
+{% ifversion fpt or ghes > 3.0 %}
 ## Usar ambientes
 
-Você pode configurar ambientes com regras de proteção e segredos. Cada trabalho em um fluxo de trabalho pode fazer referência a um único ambiente. Todas as regras de proteção configuradas para o ambiente têm de ser aprovadas antes que um trabalho de referência ao ambiente seja enviado a um executor. Para obter mais informações, consulte "[Usando ambientes para implantação](/actions/deployment/using-environments-for-deployment)".
+Você pode configurar ambientes com regras de proteção e segredos. Cada trabalho em um fluxo de trabalho pode fazer referência a um único ambiente. Todas as regras de proteção configuradas para o ambiente têm de ser aprovadas antes que um trabalho de referência ao ambiente seja enviado a um executor. Para obter mais informações, consulte "[Ambientes](/actions/reference/environments)".
 {% endif %}
 
 ## Usar um modelo do fluxo de trabalho
@@ -189,4 +187,4 @@ Você pode configurar ambientes com regras de proteção e segredos. Cada trabal
 
 ## Próximas etapas
 
-Para continuar aprendendo sobre {% data variables.product.prodname_actions %}, consulte "[Compartilhar fluxos de trabalho, segredos e executores com a sua organização](/actions/learn-github-actions/sharing-workflows-secrets-and-runners-with-your-organization)".
+Para continuar aprendendo sobre {% data variables.product.prodname_actions %}, consulte "[Compartilhar fluxos de trabalho com a sua organização](/actions/learn-github-actions/sharing-workflows-with-your-organization)".
